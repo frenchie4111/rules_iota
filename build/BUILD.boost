@@ -6,7 +6,7 @@ load("@rules_iota//internal:boost.bzl", "boost_library")
 config_setting(
     name = "linux",
     constraint_values = [
-        "@bazel_tools//platforms:linux",
+        "@platforms//os:linux",
     ],
     visibility = ["//visibility:public"],
 )
@@ -14,7 +14,7 @@ config_setting(
 config_setting(
     name = "windows",
     constraint_values = [
-        "@bazel_tools//platforms:windows",
+        "@platforms//os:windows",
     ],
     visibility = ["//visibility:public"],
 )
@@ -22,8 +22,8 @@ config_setting(
 config_setting(
     name = "linux_x86_64",
     constraint_values = [
-        "@bazel_tools//platforms:linux",
-        "@bazel_tools//platforms:x86_64",
+        "@platforms//os:linux",
+        "@platforms//cpu:x86_64",
     ],
     visibility = ["//visibility:public"],
 )
@@ -31,8 +31,8 @@ config_setting(
 config_setting(
     name = "windows_x86_64",
     constraint_values = [
-        "@bazel_tools//platforms:windows",
-        "@bazel_tools//platforms:x86_64",
+        "@platforms//os:windows",
+        "@platforms//cpu:x86_64",
     ],
     visibility = ["//visibility:public"],
 )
@@ -40,7 +40,7 @@ config_setting(
 config_setting(
     name = "osx",
     constraint_values = [
-        "@bazel_tools//platforms:osx",
+        "@platforms//os:osx",
     ],
     visibility = ["//visibility:public"],
 )
@@ -48,8 +48,8 @@ config_setting(
 config_setting(
     name = "osx_x86_64",
     constraint_values = [
-        "@bazel_tools//platforms:osx",
-        "@bazel_tools//platforms:x86_64",
+        "@platforms//os:osx",
+        "@platforms//cpu:x86_64",
     ],
     visibility = ["//visibility:public"],
 )

@@ -11,14 +11,14 @@ cat > $@ <<"EOF"
 sed -e 's/@VERSION@/1.0.15/g' \
     -e 's/@SODIUM_LIBRARY_VERSION_MAJOR@/10/g' \
     -e 's/@SODIUM_LIBRARY_VERSION_MINOR@/0/g' \
-    -e 's/@SODIUM_LIBRARY_MINIMAL_DEF@//g' 
+    -e 's/@SODIUM_LIBRARY_MINIMAL_DEF@//g'
 EOF""",
 )
 
 config_setting(
     name = "windows",
     constraint_values = [
-        "@bazel_tools//platforms:windows",
+        "@platforms//os:windows",
     ],
     visibility = ["//visibility:public"],
 )
